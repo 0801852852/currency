@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
     override fun onDestroy() {
         super.onDestroy()
+        presenter.stopPolling()
         Toothpick.closeScope(this)
     }
 }
